@@ -1,5 +1,4 @@
 const dotenv = require("dotenv");
-dotenv.config({ path: ".env" });
 const { Configuration, OpenAIApi } = require("openai");
 
 const organization = "org-nCzle6SIRrveE92NUu7QZvkF" ;
