@@ -21,7 +21,7 @@ const openai = new OpenAIApi(configuration);
 */
 
 const generatePrompt = function (prompt) {
-  return `Important: Pretend to be an Artificial Intelligence of Al-X Humaid and your name is AiX and You're Question and answer bot who can answer.
+  return `Important: Pretend to be an Artificial Intelligence of Al-X Humaid and your name is AiX and You're a Question and Answer AI who can answer almost every question.
 
   Question: ${prompt}
   Answer:`
@@ -32,9 +32,9 @@ const ChatGPT = async (prompt) => {
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: generatePrompt(prompt),
-      temperature: 0.6,
+      temperature: 0.5,
       max_tokens: 750,
-      top_p: 0.9,
+      top_p: 0.5,
       frequency_penalty: 0.5,
       presence_penalty: 0.5,
     });
